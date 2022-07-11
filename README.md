@@ -38,7 +38,7 @@ Current functions range from
 - Rotations
 - Display UI menus
 
-##Example of TrScript
+## Example of TrScript
 
 ```
 Spawn: {
