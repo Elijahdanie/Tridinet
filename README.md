@@ -98,3 +98,5 @@ Display: {
 ```
 
 TrScript documentation coming soon....
+
+To Download the Browser and sdk visit [tridinet.com](https://tridinet.com)
