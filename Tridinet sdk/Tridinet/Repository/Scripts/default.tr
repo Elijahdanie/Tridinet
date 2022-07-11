@@ -1,0 +1,25 @@
+Data:{
+	Description="This is some test Description for testing";
+}:
+|
+Rotate: {
+	axis=(0,1,0);
+	angle=0; 
+	loop=True;
+}:
+Custom: {
+
+}:
+Display: {
+	Text=(20, 40, "Text", inline, 20, bold);
+	Image = (20, 40, "imagelink", inline);
+	Text =(20, 50, ref[Description], block, 20, regular);
+    InputField=(20, 30, UserName);
+    InputField=(20, 30, Password);
+    InputField=(20, 30, Email);
+    Toggle=(Save);
+    OnClick=Call[Register](actionName, inline, "url", POST, body, UserName, Password, Email, params);
+	Response=Register(@Run[Custom, Spawn]);
+	OnClick = Open(actionName, inline, url);
+    OnClick = Run(actionName, block, Custom, Spawn);
+}:

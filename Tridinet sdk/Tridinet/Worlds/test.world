@@ -1,0 +1,95 @@
+{
+    "id": "e300f622-0ae4-4cfe-981f-e4950ff8a707",
+    "name": null,
+    "server": null,
+    "port": null,
+    "startPosition": null,
+    "worldSectors": [
+        {
+            "averagePosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "children": [
+                {
+                    "assetId": "2bacb8cb-dbf6-47be-8960-e4741fa1a9ea",
+                    "url": "https://api.tridinet.com/Repository/fetch/2bacb8cb-dbf6-47be-8960-e4741fa1a9ea_c7d913c1-e740-47ab-bdae-b25a1e761f82",
+                    "health": 0.0,
+                    "sectorId": 0,
+                    "uid": "",
+                    "transform": {
+                        "position": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "Scale": {
+                            "x": 100.0,
+                            "y": 100.0,
+                            "z": 100.0
+                        },
+                        "Rotation": {
+                            "x": -0.7071068,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "w": 0.7071067
+                        }
+                    }
+                },
+                {
+                    "assetId": "16db4176-41f3-46f6-b4c3-36c6a428258a",
+                    "url": "https://api.tridinet.com/Repository/fetch/16db4176-41f3-46f6-b4c3-36c6a428258a_c7d913c1-e740-47ab-bdae-b25a1e761f82",
+                    "health": 0.0,
+                    "sectorId": 0,
+                    "uid": "",
+                    "transform": {
+                        "position": {
+                            "x": 22.9,
+                            "y": 8.6,
+                            "z": 0.0
+                        },
+                        "Scale": {
+                            "x": 0.05,
+                            "y": 0.05,
+                            "z": 0.05
+                        },
+                        "Rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "w": 1.0
+                        }
+                    }
+                },
+                {
+                    "assetId": "163c1a01-0676-4a1f-83cc-56cbb93ff285",
+                    "url": "https://api.tridinet.com/Repository/fetch/163c1a01-0676-4a1f-83cc-56cbb93ff285_c7d913c1-e740-47ab-bdae-b25a1e761f82",
+                    "health": 0.0,
+                    "sectorId": 0,
+                    "uid": "",
+                    "transform": {
+                        "position": {
+                            "x": -18.9,
+                            "y": 3.1,
+                            "z": 39.3
+                        },
+                        "Scale": {
+                            "x": 5.0,
+                            "y": 5.0,
+                            "z": 5.0
+                        },
+                        "Rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "w": 1.0
+                        }
+                    }
+                }
+            ],
+            "Id": 0
+        }
+    ],
+    "script": null
+}

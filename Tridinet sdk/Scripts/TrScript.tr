@@ -1,0 +1,54 @@
+Spawn: {
+	target=f17af63e-bf34-45cf-a5d4-61ce9381583e;
+	num = 1;
+	offset = 1;
+	postion=(0,1,0);
+	scale=(100,100,100);
+	rotation=(-90,0,0);
+	direction = left;
+}:
+Data:{
+	Description="This is some test Description for testing";
+}:
+|
+Rotate: {
+	axis=(0,1,0);
+	angle=0; 
+	loop=True;
+}:
+Spawn: {
+	target=87c8acda-cd75-4a04-87a3-d94ba2ac7e46;
+	num = 7;
+	offset = 10;
+	position= (10,0,0);
+	scale=(100,100,100);
+	rotation=(-90,0,0);
+	direction = left;
+	style=radial;
+}:
+Spawn: {
+	target=fff1ab35-90f1-4181-b31e-9b7f9a69e964;
+	num = 10;
+	offset = 30;
+	position= (10,0,0);
+	scale=(5,5,5);
+	rotation=(-90,0,0);
+	direction = left;
+	style=radial;
+}:
+Custom: {
+
+}:
+Display: {
+	Text=(20, 40, "Text", inline, 20, bold);
+	Image = (20, 40, "imagelink", inline);
+	Text =(20, 50, ref[Description], block, 20, regular);
+    InputField=(20, 30, UserName);
+    InputField=(20, 30, Password);
+    InputField=(20, 30, Email);
+    Toggle=(Save);
+    OnClick=Call[Register](actionName, inline, "url", POST, body, UserName, Password, Email, params);
+	Response=Register(@Run[Custom, Spawn])
+	OnClick = Open(actionName, inline, url);
+    OnClick = Run(actionName, block, Custom, Spawn);
+}:
