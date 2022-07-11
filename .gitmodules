@@ -1,3 +1,6 @@
 [submodule "Tridinet Backend"]
 	path = Tridinet Backend
 	url = https://github.com/Elijahdanie/Tridinet Backend
+[submodule "Tridinet-Backend"]
+	path = Tridinet-Backend
+	url = https://github.com/Elijahdanie/Tridinet-Backend
