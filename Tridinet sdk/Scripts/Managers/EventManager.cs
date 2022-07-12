@@ -27,15 +27,7 @@ namespace Tridinet.Systems
 
         private void Awake()
         {
-            if (main == null)
-            {
-                main = this;
-                DontDestroyOnLoad(main);
-            }
-            else if (main != this)
-            {
-                Destroy(gameObject);
-            }
+            main = this;
         }
         public OnDisplayNodeObejcts ondisplayNodes = new OnDisplayNodeObejcts();
         public UnityEvent OnSave = new UnityEvent();

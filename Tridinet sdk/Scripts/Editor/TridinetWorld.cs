@@ -108,8 +108,8 @@ namespace Tridinet.WorldEditor
 
         private void OnDone(string data, bool update)
         {
-            Debug.Log(data);
             NodeBank.main.SaveWorld(data, wc.name);
+            Debug.Log(wc.id);
             if (!update)
             {
                 ApiClient.main.CreateWorld(new WorldPayload()
@@ -126,6 +126,7 @@ namespace Tridinet.WorldEditor
             {
                 ApiClient.main.UpdateWorld(new WorldPayload()
                 {
+                    id = wc.id,
                     name = wc.name,
                     description = wc.description,
                     data = data,

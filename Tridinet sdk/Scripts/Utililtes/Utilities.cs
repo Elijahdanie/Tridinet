@@ -247,7 +247,6 @@ namespace Tridinet.Utilities.Data
     public class EObject
     {
         public string uid { get; set; }
-        public Etransform transform { get; set; }
     }
 
     public enum OwnerShip {
@@ -516,7 +515,7 @@ namespace Tridinet.Utilities.Data
                 TManifest.Save(this);
             }
         }
-
+        
         public bool ContainsUri(string id)
         {
             if (tridiObjects.ContainsKey(id))
@@ -533,7 +532,6 @@ namespace Tridinet.Utilities.Data
 
         public string getUri(string assetId)
         {
-            Debug.Log(tridiObjects.Count);
             if(tridiObjects.ContainsKey(assetId))
                 return tridiObjects[assetId].Url;
             return "";
@@ -565,6 +563,7 @@ namespace Tridinet.Utilities.Data
         public string url;
         public float health;
         public int sectorId;
+        public Etransform transform;
 
         public NodeData() { }
 

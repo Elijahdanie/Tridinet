@@ -27,15 +27,7 @@ namespace Tridinet.Utilities.Data
 
         private void Awake()
         {
-            if (main == null)
-            {
-                main = this;
-                DontDestroyOnLoad(main);
-            }
-            else if (main != this)
-            {
-                Destroy(gameObject);
-            }
+            main = this;
             localItems = Directory.GetFiles("./tri");
         }
 
@@ -297,13 +289,10 @@ namespace Tridinet.Utilities.Data
         {
             if (File.Exists(path))
             {
-                Debug.Log(path);
                 var file = File.ReadAllText(path);
-                Debug.Log(file);
                 var world = JsonConvert.DeserializeObject<World>(file);
                 return world;
             }
-            Debug.Log("cannot find it");
             //make api request
             return null;
         }

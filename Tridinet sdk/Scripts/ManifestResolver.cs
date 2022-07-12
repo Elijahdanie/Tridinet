@@ -96,7 +96,6 @@ public class ManifestResolver {
     /// </summary>
     /// <returns></returns>
     public string ProcessWorld() {
-        Debug.Log("processing world");
         int count = 0;
         foreach (var sector in w.worldSectors)
         {
@@ -105,11 +104,9 @@ public class ManifestResolver {
                 EditorUtility.DisplayProgressBar($"{ptitile}", "Preparing your world", count / sector.children.Count);
                 var uri = manifest.getUri(item.assetId);
                     item.url = uri;
-                Debug.Log(uri);
             }
         }
         var file = JsonConvert.SerializeObject(w);
-        Debug.Log(file);
         return file;
     }
 

@@ -19,15 +19,7 @@ namespace Tridinet.Systems
 
         private void Awake()
         {
-            if (main == null)
-            {
-                main = this;
-                DontDestroyOnLoad(main);
-            }
-            else if(main != this)
-            {
-                Destroy(gameObject);
-            }
+            main = this;
         }
 
         internal void GetUri(string uri)
@@ -132,7 +124,7 @@ namespace Tridinet.Systems
 
         public void Build(NodeData data, int level)
         {
-            Debug.Log($"building {data.url}");
+            Debug.Log(data.transform);
             NodeBank.main.Replicate(level, data, OnBuild);
         }
 
@@ -154,7 +146,6 @@ namespace Tridinet.Systems
             if (world != null && world.worldSectors != null && world.worldSectors.Count > 0)
             {
                 var nodedata = world.worldSectors[0].children.Find(x => {
-                    Debug.Log($"{x.assetId}_{id}_{x.assetId == id}");
                     return x.assetId == id;
                     });
                 if (nodedata.url == null)

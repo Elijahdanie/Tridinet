@@ -29,15 +29,7 @@ namespace Tridinet.Systems
 
         private void Awake()
         {
-            if (main == null)
-            {
-                main = this;
-                DontDestroyOnLoad(main);
-            }
-            else if (main != this)
-            {
-                Destroy(gameObject);
-            }
+            main = this;
         }
 
         private void Start()
@@ -63,7 +55,7 @@ namespace Tridinet.Systems
             }
             else
             {
-                WorldBuilder.main.InitViaBrower(world);
+                WorldBuilder.main.Init(world);
             }
         }
 

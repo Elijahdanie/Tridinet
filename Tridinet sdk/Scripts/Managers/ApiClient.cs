@@ -33,15 +33,7 @@ public class ApiClient : MonoBehaviour
 
     private void Awake()
     {
-		if (main == null)
-		{
-			main = this;
-			DontDestroyOnLoad(main);
-		}
-		else if (main != this)
-		{
-			Destroy(gameObject);
-		}
+		main = this;
 	}
 
     private void Start()
@@ -365,11 +357,11 @@ public class ApiClient : MonoBehaviour
 		.Then(data => {
 			Debug.Log(data.Text);
 			var payload = JsonUtility.FromJson<World>(data.Text);
-			WorldBuilder.main.InitViaBrower(payload);
+			WorldBuilder.main.Init(payload);
 			RestClient.ClearDefaultParams();
 			this.LogMessage("Success", JsonUtility.ToJson(data, true));
 		})
-		.Catch(err => this.LogMessage("Error", err.Message));
+		.Catch(err => throw err);
 	}
 
 	public void CreateWorld(WorldPayload payload, UnityAction<WorldPayload> onCreated)
@@ -403,7 +395,7 @@ public class ApiClient : MonoBehaviour
 	{
 		RestClient.DefaultRequestHeaders["authorization"] = $"Bearer {PlayerPrefs.GetString("token")}";
 		var form = new WWWForm();
-		form.AddField("name", payload.name);
+		form.AddField("id", payload.id);
 		form.AddField("description", payload.description);
 		form.AddField("privateKey", payload.privateKey);
 		form.AddField("type", payload.type);
